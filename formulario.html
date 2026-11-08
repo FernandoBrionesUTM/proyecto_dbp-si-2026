@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro | Prácticas de estándares W3C</title>
     <link rel="stylesheet" href="estilos.css">
-    <script type = "C:\Users\LAB-204-LTP07\Desktop\Practica#2\Practica#2\codigo.js"></script>
-
 </head>
 <body class="contenedor">
     <header class="encabezado">
@@ -24,9 +22,9 @@
     <main>
         <section>
             <h2>Mensaje de prueba</h2>
-            <p onclick="alert('Un mensaje de prueba')">Clickeame para algo genial ;D</p>
+            <button type="button" id="btn-mensaje" aria-expanded="false">Clickéame para algo genial</button>
+            <p id="texto-mensaje"></p>
             <p>Resultado de multiplicar 4 por 3: <span id="demo"></span></p>
-            <script src="codigo.js"></script>
         </section>
 
         <form name="datos" class="no" action="#" method="get">
@@ -80,5 +78,7 @@
     <footer class="pie">
         <p>Prácticas de la asignatura Desarrollo Basado en Plataformas</p>
     </footer>
+
+    <script src="codigo.js"></script>
 </body>
 </html>
