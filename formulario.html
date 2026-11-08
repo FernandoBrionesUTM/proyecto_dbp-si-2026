@@ -27,32 +27,37 @@
             <p>Resultado de multiplicar 4 por 3: <span id="demo"></span></p>
         </section>
 
-        <form name="datos" class="no" action="#" method="get">
+        <form id="formulario" name="datos" class="no" action="#" method="get">
             <h2>Datos de registro</h2>
+            <p>Los campos marcados como obligatorios deben llenarse antes de enviar.</p>
             <p>
                 <label for="numero">Número</label><br>
                 <input type="number" id="numero" name="numero">
             </p>
             <p>
-                <label for="email">E-mail</label><br>
-                <input type="email" id="email" name="ema_user" placeholder="Ingrese su email">
+                <label for="email">E-mail (obligatorio)</label><br>
+                <input type="email" id="email" name="ema_user" placeholder="Ingrese su email" autocomplete="email" required aria-describedby="error-email">
             </p>
+            <p class="error" id="error-email"></p>
             <p>
-                <label for="nombres">Nombre</label><br>
-                <input type="text" id="nombres" name="name_user" placeholder="Ingrese sus nombres">
+                <label for="nombres">Nombre (obligatorio)</label><br>
+                <input type="text" id="nombres" name="name_user" placeholder="Ingrese sus nombres" autocomplete="given-name" required aria-describedby="error-nombres">
             </p>
+            <p class="error" id="error-nombres"></p>
             <p>
-                <label for="apellidos">Apellido</label><br>
-                <input type="text" id="apellidos" name="ape_user" placeholder="Ingrese sus apellidos">
+                <label for="apellidos">Apellido (obligatorio)</label><br>
+                <input type="text" id="apellidos" name="ape_user" placeholder="Ingrese sus apellidos" autocomplete="family-name" required aria-describedby="error-apellidos">
             </p>
+            <p class="error" id="error-apellidos"></p>
             <p>
                 <label for="nacimiento">Fecha de nacimiento</label><br>
-                <input type="date" id="nacimiento" name="nacimiento">
+                <input type="date" id="nacimiento" name="nacimiento" autocomplete="bday">
             </p>
             <p>
                 <label for="web">Página web</label><br>
-                <input type="url" id="web" name="web">
+                <input type="url" id="web" name="web" autocomplete="url" aria-describedby="error-web">
             </p>
+            <p class="error" id="error-web"></p>
             <fieldset>
                 <legend>¿Qué estándares conoces?</legend>
                 <p><input type="checkbox" id="html5" value="HTML5" checked> <label for="html5">HTML5</label></p>
@@ -63,7 +68,8 @@
                 <label for="comentarios">Comentarios</label><br>
                 <textarea id="comentarios" name="comentarios" cols="25" rows="6"></textarea>
             </p>
-            <button type="button" class="verde" name="bt">Enviar la información</button>
+            <button type="submit" class="verde">Enviar la información</button>
+            <p class="exito" id="estado-envio" role="status"></p>
         </form>
 
         <section>

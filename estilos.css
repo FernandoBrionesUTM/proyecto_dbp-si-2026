@@ -109,6 +109,19 @@ button {
     font-size: 1em;
 }
 
+input[aria-invalid="true"] {
+    border: 3px solid #8b0000;
+}
+
+.error {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.exito {
+    font-weight: bold;
+}
+
 .verde {
     background-color: darkgreen;
     color: white;
