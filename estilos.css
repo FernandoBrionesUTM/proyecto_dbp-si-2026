@@ -1,43 +1,79 @@
 .contenedor {
     background-color: blanchedalmond;
     display: grid;
-    grid-template-rows: auto 300 px 1fr 1fr auto;
+    grid-template-rows: auto auto 1fr auto auto;
     min-height: 100vh;
 }
-.seccion {
-    background-color:darkkhaki;
-}
-article {
-    color:antiquewhite;
-    font-family:cursive;
-}
-.encabezado{
+
+.encabezado {
     background-color: greenyellow;
 }
-.navegador{
-    background-color:aquamarine;
+
+.navegador {
+    background-color: aquamarine;
 }
+
 .contenido {
     background-color: coral;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.mk{
-background-color: burlywood;
 
+.seccion {
+    background-color: darkkhaki;
 }
-.pie{
+
+article {
+    color: antiquewhite;
+    font-family: cursive;
+}
+
+.mk {
+    background-color: burlywood;
+}
+
+.pie {
     background-color: gray;
 }
-body{
-    background-color: bisque;
-.Titulo{
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+h1 {
+    color: chocolate;
+    font-family: 'Times New Roman', Times, serif;
 }
-.si{
+
+h2 {
+    color: teal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: white;
+    font-family: cursive;
+}
+
+li {
+    color: tomato;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+.Titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.si {
     color: brown;
     font-family: 'Courier New', Courier, monospace;
 }
-.no{
+
+.no {
     color: blueviolet;
+}
+
+.verde {
+    background-color: darkgreen;
+    color: white;
 }
