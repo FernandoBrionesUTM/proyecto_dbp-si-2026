@@ -39,7 +39,6 @@ main {
 
 article {
     padding: 1em;
-    color: antiquewhite;
     font-family: cursive;
 }
 
@@ -54,22 +53,20 @@ article {
 }
 
 h1 {
-    color: chocolate;
+    color: #5c2e00;
     font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
-    color: teal;
+    color: #003333;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 p {
-    color: white;
     font-family: cursive;
 }
 
 li {
-    color: tomato;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -80,6 +77,10 @@ li {
 
 .no {
     color: blueviolet;
+}
+
+article a {
+    color: navy;
 }
 
 .verde {
