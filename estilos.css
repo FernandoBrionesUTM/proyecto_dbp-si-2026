@@ -1,0 +1,43 @@
+.contenedor {
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-rows: auto 300 px 1fr 1fr auto;
+    min-height: 100vh;
+}
+.seccion {
+    background-color:darkkhaki;
+}
+article {
+    color:antiquewhite;
+    font-family:cursive;
+}
+.encabezado{
+    background-color: greenyellow;
+}
+.navegador{
+    background-color:aquamarine;
+}
+.contenido {
+    background-color: coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.mk{
+background-color: burlywood;
+
+}
+.pie{
+    background-color: gray;
+}
+body{
+    background-color: bisque;
+.Titulo{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+.si{
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+}
+.no{
+    color: blueviolet;
+}
