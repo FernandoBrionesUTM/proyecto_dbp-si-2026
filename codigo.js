@@ -1,34 +1,29 @@
-// estoy aprendiendo java script
+// Fernando Briones
+// Michael Pinoargote
 
-/* Fernando Briones
-   Michael Pinoargote */
-var mensaje = "bienvenido anuestra web";
-var nombreProducto = 'Producto ABC';
-var letraSeleccionada = 'c';
-function multiplicar(p1,p2){
-    return p1 * p2 ;
-}
-document.getElementById("demo").innerHTML = multiplicar(4,3);
-
-var boton = document.getElementById("btn-mensaje");
-var texto = document.getElementById("texto-mensaje");
-
-function alternarMensaje(){
-    if (boton.getAttribute("aria-expanded") == "false") {
-        texto.innerHTML = "Un mensaje de prueba";
-        boton.setAttribute("aria-expanded", "true");
-    } else {
-        texto.innerHTML = "";
-        boton.setAttribute("aria-expanded", "false");
-    }
+function multiplicar(a, b) {
+    return a * b;
 }
 
-boton.addEventListener("click", alternarMensaje);
+document.getElementById("demo").textContent = multiplicar(4, 3);
 
-var formulario = document.getElementById("formulario");
-var estado = document.getElementById("estado-envio");
-var campos = ["email", "nombres", "apellidos", "web"];
-var nombresCampo = {
+/* Mensaje que se muestra y se oculta con el botón */
+const botonMensaje = document.getElementById("btn-mensaje");
+const textoMensaje = document.getElementById("texto-mensaje");
+
+function alternarMensaje() {
+    const abierto = botonMensaje.getAttribute("aria-expanded") === "true";
+    textoMensaje.textContent = abierto ? "" : "Un mensaje de prueba";
+    botonMensaje.setAttribute("aria-expanded", String(!abierto));
+}
+
+botonMensaje.addEventListener("click", alternarMensaje);
+
+
+const formulario = document.getElementById("formulario");
+const estado = document.getElementById("estado-envio");
+const campos = ["email", "nombres", "apellidos", "web"];
+const nombresCampo = {
     email: "el correo electrónico",
     nombres: "los nombres",
     apellidos: "los apellidos",
@@ -46,10 +41,10 @@ function mensajeDeError(campo) {
 }
 
 function revisarCampo(id) {
-    var campo = document.getElementById(id);
-    var mensaje = mensajeDeError(campo);
-    document.getElementById("error-" + id).innerHTML = mensaje;
-    if (mensaje == "") {
+    const campo = document.getElementById(id);
+    const mensaje = mensajeDeError(campo);
+    document.getElementById("error-" + id).textContent = mensaje;
+    if (mensaje === "") {
         campo.removeAttribute("aria-invalid");
         return true;
     }
@@ -59,20 +54,19 @@ function revisarCampo(id) {
 
 function enviarFormulario(evento) {
     evento.preventDefault();
-    var primerError = null;
-    for (var i = 0; i < campos.length; i++) {
-        if (!revisarCampo(campos[i]) && primerError == null) {
-            primerError = document.getElementById(campos[i]);
+    let primerError = null;
+    for (const id of campos) {
+        if (!revisarCampo(id) && primerError === null) {
+            primerError = document.getElementById(id);
         }
     }
     if (primerError) {
-        estado.innerHTML = "";
+        estado.textContent = "";
         primerError.focus();
     } else {
-        estado.innerHTML = "La información se envió correctamente (es una simulación, no se guarda en ningún servidor).";
+        estado.textContent = "La información se envió correctamente (es una simulación).";
     }
 }
 
-// sin JavaScript queda la validación nativa del navegador (required)
 formulario.noValidate = true;
 formulario.addEventListener("submit", enviarFormulario);
