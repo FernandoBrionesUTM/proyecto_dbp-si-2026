@@ -29,22 +29,43 @@
             <script src="codigo.js"></script>
         </section>
 
-        <form name="datos" class="no">
+        <form name="datos" class="no" action="#" method="get">
             <h2>Datos de registro</h2>
-            <input type="number">Numero<br>
-            <input type="email" class="label" name="ema_user" placeholder="Ingrese su email">E-mail<br>
-            <input type="text" class="label" name="name_user" placeholder="Ingrese sus Nombres">Nombre<br>
-            <input type="text" class="label" name="ape_user" placeholder="Ingrese sus Apellidos">Apellido<br>
-            <input type="date">Fecha de nacimiento<br>
-            <input type="url">Pagina web<br>
-            <label>Que estandares conoces?</label><br>
-            <input type="checkbox" value="HTML5" checked>html5<br>
-            <input type="checkbox" value="CSS3">CSS3<br>
-            <input type="checkbox" value="Javascript">Javascript<br>
-            <textarea cols="15" rows="6"></textarea>
-            <br>
-            <div class="botoncito_registrar">
-                <input type="button" name="bt" class="verde" value="Enviar la informacion"><br></div>
+            <p>
+                <label for="numero">Número</label><br>
+                <input type="number" id="numero" name="numero">
+            </p>
+            <p>
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="ema_user" placeholder="Ingrese su email">
+            </p>
+            <p>
+                <label for="nombres">Nombre</label><br>
+                <input type="text" id="nombres" name="name_user" placeholder="Ingrese sus nombres">
+            </p>
+            <p>
+                <label for="apellidos">Apellido</label><br>
+                <input type="text" id="apellidos" name="ape_user" placeholder="Ingrese sus apellidos">
+            </p>
+            <p>
+                <label for="nacimiento">Fecha de nacimiento</label><br>
+                <input type="date" id="nacimiento" name="nacimiento">
+            </p>
+            <p>
+                <label for="web">Página web</label><br>
+                <input type="url" id="web" name="web">
+            </p>
+            <fieldset>
+                <legend>¿Qué estándares conoces?</legend>
+                <p><input type="checkbox" id="html5" value="HTML5" checked> <label for="html5">HTML5</label></p>
+                <p><input type="checkbox" id="css3" value="CSS3"> <label for="css3">CSS3</label></p>
+                <p><input type="checkbox" id="javascript" value="Javascript"> <label for="javascript">JavaScript</label></p>
+            </fieldset>
+            <p>
+                <label for="comentarios">Comentarios</label><br>
+                <textarea id="comentarios" name="comentarios" cols="25" rows="6"></textarea>
+            </p>
+            <button type="button" class="verde" name="bt">Enviar la información</button>
         </form>
 
         <section>
