@@ -19,7 +19,7 @@ function alternarMensaje() {
 
 botonMensaje.addEventListener("click", alternarMensaje);
 
-
+/* Validación del formulario con mensajes de error en texto */
 const formulario = document.getElementById("formulario");
 const estado = document.getElementById("estado-envio");
 const campos = ["email", "nombres", "apellidos", "web"];
@@ -64,9 +64,10 @@ function enviarFormulario(evento) {
         estado.textContent = "";
         primerError.focus();
     } else {
-        estado.textContent = "La información se envió correctamente (es una simulación).";
+        estado.textContent = "La información se envió correctamente (es una simulación, no se guarda en ningún servidor).";
     }
 }
 
+// sin JavaScript queda la validación nativa del navegador (required)
 formulario.noValidate = true;
 formulario.addEventListener("submit", enviarFormulario);

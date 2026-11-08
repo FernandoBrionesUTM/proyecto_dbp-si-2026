@@ -127,6 +127,7 @@ input[aria-invalid="true"] {
     color: white;
 }
 
+/* Foco visible al navegar con el teclado */
 a:focus,
 button:focus,
 input:focus,
